@@ -1,3 +1,17 @@
+// Navbar auto close
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+    const navbarCollapse = document.getElementById("navbarNav");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            const collapse = new bootstrap.Collapse(navbarCollapse);
+            collapse.hide();
+        });
+    });
+});
+
+
 // Render the template when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     const template = document.documentElement.innerHTML;
